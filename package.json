@@ -1,0 +1,27 @@
+{
+  "name": "jafer-nouri-brand-motion",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal brand animation for Jafer Nouri, built with Remotion",
+  "scripts": {
+    "dev": "remotion studio",
+    "render": "remotion render BrandFilm out/jafer-nouri-brand.mp4",
+    "render:vertical": "remotion render BrandFilmVertical out/jafer-nouri-brand-vertical.mp4",
+    "render:all": "npm run render && npm run render:vertical",
+    "still": "remotion still BrandFilm out/thumbnail.png --frame=290",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.529",
+    "@remotion/fonts": "^4.0.529",
+    "@remotion/google-fonts": "^4.0.529",
+    "@remotion/transitions": "^4.0.529",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "remotion": "^4.0.529"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "typescript": "^7.0.2"
+  }
+}
