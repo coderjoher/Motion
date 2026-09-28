@@ -7,9 +7,11 @@
     "dev": "remotion studio",
     "render": "remotion render BrandFilm out/jafer-nouri-brand.mp4",
     "render:vertical": "remotion render BrandFilmVertical out/jafer-nouri-brand-vertical.mp4",
-    "render:all": "npm run render && npm run render:vertical",
+    "render:all": "npm run render && npm run render:vertical && npm run render:poster && npm run render:poster:vertical",
     "still": "remotion still BrandFilm out/thumbnail.png --frame=290",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "render:poster": "remotion render PosterFilm out/jafer-nouri-poster.mp4",
+    "render:poster:vertical": "remotion render PosterFilmVertical out/jafer-nouri-poster-vertical.mp4"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.529",
