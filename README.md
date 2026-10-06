@@ -1,9 +1,12 @@
 # Jafer Nouri — Brand Films
 
-Two motion pieces built with [Remotion](https://www.remotion.dev/) from the same content (`src/brand.ts`):
+Three motion pieces:
 
-- **Brand Film**: styled to match the portfolio site.
-- **Poster Film**: an independent editorial look that shares only the content (see below).
+- **Brand Film** (Remotion): styled to match the portfolio site.
+- **Poster Film** (Remotion): an independent editorial look that shares only the content.
+- **First Message** (`film/`): directed and checked with the [motionmaxxing](https://github.com/Tejashmakwana/motionmaxxing) skill, built in its HTML + GSAP runtime from a fresh capture of the live site (see the end of this file).
+
+The two Remotion films share `src/brand.ts`.
 
 ---
 
@@ -87,3 +90,35 @@ import { Audio, staticFile } from "remotion";
 // ...
 <Audio src={staticFile("music.mp3")} volume={0.8} />
 ```
+
+---
+
+## First Message (motionmaxxing)
+
+A 19.7 s UI documentary of one task, built on the site's own line "From first message to live site":
+
+1. A client's first message is typed into a chat panel.
+2. The camera dives into the sent message, and it becomes the first wireframe block of Jafer's sample site.
+3. The wireframe becomes the designed page.
+4. The cursor presses `العربية` and the whole page mirrors to right-to-left Arabic, using the site's real Arabic copy.
+5. The site goes live and the enquiries counter steps from 0 to 1 when a visitor presses `راسلنا`.
+6. A whip pan passes the four real client builds and lands on his name.
+
+| File | What |
+|---|---|
+| `film/index.html` | the film (motionmaxxing runtime: `film/runtime/motion.js` + GSAP) |
+| `film/STORYBOARD.md` | PAGE, brand inventory, ideas, film system, beat table |
+| `film/NOTE.md` | what is real vs illustrative, gate numbers from the skill's scripts, frame-by-frame review |
+| `film/brand/` | the skill's capture of the live site (`brand.mjs`) |
+
+Re-render it with a local clone of the skill (Chrome + ffmpeg required):
+
+```bash
+git clone https://github.com/Tejashmakwana/motionmaxxing ../motionmaxxing
+node ../motionmaxxing/scripts/render.mjs film/index.html film/final.mp4 --grain 0.03
+python3 ../motionmaxxing/scripts/look.py film/final.mp4 --out film/look-final --expect 19.67
+node ../motionmaxxing/scripts/lint.mjs film/index.html
+```
+
+`film/runtime/` is copied from the skill (Apache-2.0; `vendor/gsap.min.js` is GSAP under its own GreenSock licence).
+

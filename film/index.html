@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Jafer Nouri — First message</title>
+<meta name="viewport" content="width=1920, height=1080">
+<style>
+/* ACCENT = "live / reachable" (#1ede55, sampled from the site's availability badge). One element per scene. */
+@font-face { font-family: "Space Grotesk"; src: url("assets/fonts/space-grotesk-300-700.woff2") format("woff2"); font-weight: 300 700; font-display: block; }
+@font-face { font-family: "Switzer"; src: url("assets/fonts/switzer-500.woff2") format("woff2"); font-weight: 500; font-display: block; }
+@font-face { font-family: "Switzer"; src: url("assets/fonts/switzer-600.woff2") format("woff2"); font-weight: 600; font-display: block; }
+@font-face { font-family: "Plex Arabic"; src: url("assets/fonts/plex-arabic-500.woff2") format("woff2"); font-weight: 500; font-display: block; }
+@font-face { font-family: "Plex Arabic"; src: url("assets/fonts/plex-arabic-600.woff2") format("woff2"); font-weight: 600; font-display: block; }
+:root {
+  --ground: #0e0e0e; --ink: #f2f2f2; --ink-soft: #8f8f8f; --accent: #1ede55;
+  --sg: "Space Grotesk", sans-serif; --ui: "Switzer", sans-serif; --ar: "Plex Arabic", sans-serif;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #000; }
+#main { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; overflow: hidden; background: var(--ground); color: var(--ink); font-family: var(--ui); font-weight: 500; }
+#field { position: absolute; inset: 0; }
+.scene { position: absolute; inset: 0; }
+.cam { position: absolute; inset: 0; }
+.ar { font-family: var(--ar); direction: rtl; }
+
+/* ---------- 1  chat ---------- */
+#chat { position: absolute; left: 340px; top: 305px; width: 1240px; height: 470px; background: #141414; border: 1px solid #262626; }
+#chat .av { position: absolute; left: 32px; top: 22px; width: 64px; height: 64px; object-fit: cover; }
+#chat .who { position: absolute; left: 120px; top: 22px; font: 600 28px/34px var(--ui); letter-spacing: -0.01em; }
+#chat .status { position: absolute; left: 120px; top: 62px; font: 500 20px/26px var(--ui); color: var(--ink-soft); display: flex; align-items: center; gap: 12px; }
+#chat .status i { width: 12px; height: 12px; background: var(--accent); display: block; }
+#chat .rule { position: absolute; left: 0; right: 0; top: 108px; height: 1px; background: #232323; }
+#field1 { position: absolute; left: 32px; top: 370px; width: 1076px; height: 76px; background: #0e0e0e; border: 1px solid #2c2c2c; }
+#ph, #typed { position: absolute; left: 24px; top: 18px; height: 40px; font: 500 32px/40px var(--ui); white-space: pre; letter-spacing: -0.01em; }
+#ph { color: #575757; }
+#caret { position: absolute; left: 24px; top: 20px; width: 3px; height: 36px; background: #f2f2f2; }
+#send { position: absolute; left: 1132px; top: 370px; width: 76px; height: 76px; background: #f2f2f2; }
+#send svg { position: absolute; inset: 0; }
+#bubble { position: absolute; left: 308px; top: 252px; width: 900px; height: 84px; background: #f2f2f2; color: #0e0e0e; font: 500 32px/84px var(--ui); padding-left: 28px; white-space: pre; letter-spacing: -0.01em; }
+#dots { position: absolute; left: 32px; top: 146px; width: 104px; height: 52px; background: #1d1d1d; border: 1px solid #262626; }
+#dots i { position: absolute; top: 21px; width: 10px; height: 10px; background: #bdbdbd; }
+
+/* ---------- 2-4  the page (a rebuild of the site's own plan.fig / build.fig / yourwebsite.com sample) ---------- */
+#page { position: absolute; left: 240px; top: 90px; width: 1440px; height: 900px; background: #fafafa; overflow: hidden; color: #111; box-shadow: 0 40px 140px rgba(0,0,0,.55), 0 0 0 1px #2a2a2a; }
+#chrome { position: absolute; left: 0; top: 0; width: 1440px; height: 56px; background: #f1f1f1; border-bottom: 1px solid #e0e0e0; }
+#chrome b { position: absolute; top: 22px; width: 12px; height: 12px; background: #cfcfcf; }
+#url { position: absolute; left: 520px; top: 12px; width: 400px; height: 32px; background: #fff; border: 1px solid #dcdcdc; font: 500 15px/30px var(--ui); color: #333; }
+#url span { position: absolute; left: 34px; top: 0; }
+#url i { position: absolute; left: 14px; top: 11px; width: 9px; height: 9px; background: #8a8a8a; }
+#chip span { position: absolute; right: 22px; top: 14px; height: 28px; padding: 0 12px; font: 600 13px/28px var(--ui); letter-spacing: .08em; background: #111; color: #fff; white-space: pre; }
+#chipPlan { background: #e4e4e4 !important; color: #555 !important; }
+#chipLive { background: var(--accent) !important; color: #0e0e0e !important; }
+#body { position: absolute; left: 0; top: 56px; width: 1440px; height: 844px; }
+.abs { position: absolute; }
+
+/* wireframe layer */
+#wgrid { position: absolute; inset: 0; background-image: linear-gradient(rgba(0,0,0,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,.045) 1px, transparent 1px); background-size: 40px 40px; }
+.wb { position: absolute; border: 2px dashed #b9b9b9; }
+.bar { position: absolute; height: 14px; background: #e3e3e3; }
+.note { position: absolute; font: 500 17px/22px var(--ui); color: #8a8a8a; white-space: pre; }
+
+/* designed layer: movers carry an English child (left-aligned) and an Arabic child (right-aligned) in one fixed box */
+.mv { position: absolute; filter: blur(var(--b, 0px)); }
+.mv > .en, .mv > .ar { position: absolute; top: 0; }
+.mv > .en { left: 0; } .mv > .ar { right: 0; }
+.sq { width: 44px; height: 44px; background: #111; color: #fff; display: grid; place-items: center; font: 600 20px/1 var(--sg); }
+.row { display: flex; align-items: center; gap: 14px; white-space: pre; }
+.nm { font: 500 21px/44px var(--sg); color: #b5b5b5; letter-spacing: -0.02em; }
+.ar .nm { font: 600 21px/44px var(--ar); }
+.links { display: flex; gap: 30px; font: 500 17px/44px var(--ui); color: #333; white-space: pre; }
+.ar.links { font: 500 17px/44px var(--ar); }
+.lang { font: 500 17px/44px var(--ar); color: #111; white-space: pre; display: inline-block; }
+.lang.lat { font-family: var(--ui); }
+.wa { height: 44px; padding: 0 22px; background: #111; color: #fff; font: 600 16px/44px var(--ui); white-space: pre; display: inline-block; }
+.wa.ar { font-family: var(--ar); }
+.badge { display: inline-flex; align-items: center; gap: 10px; height: 34px; padding: 0 12px; border: 1px solid #dadada; background: #fff; font: 500 15px/34px var(--ui); white-space: pre; }
+.badge.ar { font-family: var(--ar); }
+.badge i { width: 9px; height: 9px; background: #9a9a9a; }
+.hl { font: 500 62px/70px var(--sg); letter-spacing: -0.035em; white-space: pre; position: absolute; left: 0; }
+.hla { font: 600 56px/76px var(--ar); white-space: pre; text-align: right; }
+.sub { font: 500 19px/29px var(--ui); color: #6a6a6a; width: 560px; }
+.sub.ar { font-family: var(--ar); text-align: right; }
+.btn { height: 52px; padding: 0 26px; font: 600 17px/52px var(--ui); white-space: pre; display: inline-block; }
+.btn.k { background: #111; color: #fff; } .btn.o { background: #fff; border: 1px solid #d6d6d6; color: #111; line-height: 50px; }
+.btnrow { display: flex; gap: 14px; }
+.ar .btn { font-family: var(--ar); }
+
+#panel { background: #161616; color: #f2f2f2; overflow: hidden; }
+#panel .lay { position: absolute; inset: 0; }
+#panel .lay::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,.09) 1.2px, transparent 1.6px); background-size: 18px 18px; }
+.ph { position: absolute; top: 18px; font: 600 13px/20px var(--ui); letter-spacing: .1em; color: #a8a8a8; white-space: pre; }
+.ar .ph, .ph.ar { font-family: var(--ar); letter-spacing: 0; font-size: 15px; }
+.chipS { position: absolute; top: 14px; height: 26px; padding: 0 10px; border: 1px solid #3a3a3a; font: 600 12px/24px var(--ui); color: #bdbdbd; letter-spacing: .08em; white-space: pre; }
+.cc { position: absolute; top: 64px; width: 220px; height: 126px; background: #202020; border: 1px solid #303030; }
+.cnum { position: absolute; top: 14px; font: 600 48px/56px var(--ui); letter-spacing: -0.02em; }
+.clab { position: absolute; top: 74px; font: 600 12px/18px var(--ui); letter-spacing: .08em; color: #b8b8b8; white-space: pre; }
+.ar .clab { font: 500 15px/18px var(--ar); letter-spacing: 0; }
+.cex { position: absolute; top: 98px; font: 500 13px/18px var(--ui); color: #8c8c8c; white-space: pre; }
+.ar .cex { font-family: var(--ar); }
+.bars { position: absolute; left: 24px; right: 24px; bottom: 54px; height: 150px; display: flex; align-items: flex-end; gap: 12px; }
+.bars i { flex: 1; background: #3b3b3b; display: block; }
+.ov { position: absolute; bottom: 20px; font: 600 12px/18px var(--ui); letter-spacing: .1em; color: #8a8a8a; white-space: pre; }
+.ar .ov { font: 500 14px/18px var(--ar); letter-spacing: 0; }
+#toast { position: absolute; left: 24px; top: 338px; width: 300px; height: 70px; background: #fff; color: #111; border: 1px solid #e2e2e2; }
+#toast b { position: absolute; right: 16px; top: 20px; width: 28px; height: 28px; background: #111; color: #fff; display: grid; place-items: center; font: 600 16px/1 var(--ui); }
+#toast .t1 { position: absolute; right: 58px; top: 10px; font: 600 18px/26px var(--ar); white-space: pre; }
+#toast .t2 { position: absolute; right: 58px; top: 36px; font: 500 14px/22px var(--ar); color: #777; white-space: pre; }
+
+.card { background: #fff; border: 1px solid #e3e3e3; }
+.card .ic { position: absolute; top: 28px; width: 44px; height: 44px; background: #111; color: #fff; display: grid; place-items: center; font: 600 18px/1 var(--ui); }
+.card .ct { position: absolute; top: 26px; font: 600 18px/24px var(--ui); white-space: pre; }
+.card .cs { position: absolute; top: 52px; font: 500 15px/22px var(--ui); color: #808080; white-space: pre; }
+.card .ca { position: absolute; top: 18px; font: 600 18px/1 var(--ui); color: #555; }
+.card .ar .ct, .card .ar .cs { font-family: var(--ar); }
+
+/* his site's own cursor: black arrow, square name tag */
+#cursor { position: absolute; left: 0; top: 0; width: 0; height: 0; overflow: visible; }
+#cursor svg { position: absolute; left: 0; top: 0; overflow: visible; }
+#cursor span { position: absolute; left: 22px; top: 34px; padding: 0 8px; height: 24px; background: #111; color: #fff; font: 600 14px/24px var(--ui); white-space: pre; }
+
+/* ---------- 5  real work ---------- */
+#strip { position: absolute; left: 0; top: 160px; height: 760px; width: 3400px; }
+.cv { position: absolute; top: 0; width: 760px; }
+.cv .img { width: 760px; height: 570px; overflow: hidden; }
+.cv img { width: 760px; height: 570px; object-fit: cover; display: block; }
+.cv .n { margin-top: 26px; font: 500 40px/48px var(--sg); letter-spacing: -0.03em; color: var(--ink); white-space: pre; }
+.cv .c { margin-top: 4px; font: 500 22px/30px var(--ui); color: var(--ink-soft); white-space: pre; }
+
+/* ---------- 6  name ---------- */
+#lockup { position: absolute; inset: 0; }
+#hs { position: absolute; left: 850px; top: 375px; width: 160px; height: 160px; object-fit: cover; }
+#name { position: absolute; left: 722px; top: 404px; font: 500 112px/120px var(--sg); letter-spacing: -0.035em; white-space: pre; }
+#line { position: absolute; left: 670px; top: 592px; font: 500 44px/56px var(--ui); color: var(--ink-soft); white-space: pre; letter-spacing: -0.01em; }
+#avail { position: absolute; left: 630px; top: 612px; width: 18px; height: 18px; background: var(--accent); }
+</style>
+</head>
+<body>
+<div id="main">
+  <canvas id="field" width="1920" height="1080"></canvas>
+
+  <!-- 1  CHAT (0-105) -->
+  <section id="s1" class="scene"><div id="cam1" class="cam">
+    <div id="chat" data-ui>
+      <img class="av" src="assets/img/headshot.jpg" alt="">
+      <div class="who">Jafer Nouri</div>
+      <div class="status"><i></i>Available for new projects</div>
+      <div class="rule"></div>
+      <div id="dots"><i style="left:22px"></i><i style="left:47px"></i><i style="left:72px"></i></div>
+      <div id="bubble">Hi Jafer, we need a website in Arabic and English.</div>
+      <div id="field1"><div id="ph">Tell me about your business</div><div id="typed">Hi Jafer, we need a website in Arabic and English.</div><i id="caret"></i></div>
+      <div id="send"><svg viewBox="0 0 76 76"><path d="M24 38 H52 M40 26 L52 38 L40 50" fill="none" stroke="#0e0e0e" stroke-width="4" stroke-linecap="square"/></svg></div>
+    </div>
+  </div></section>
+
+  <!-- 2-4  THE PAGE (105-446) -->
+  <section id="s2" class="scene"><div id="cam2" class="cam">
+    <div id="page" data-ui="captured">
+      <div id="chrome">
+        <b style="left:22px"></b><b style="left:42px"></b><b style="left:62px"></b>
+        <div id="url"><i></i><span id="urlPlan">plan.fig</span><span id="urlBuild">build.fig</span><span id="urlLive">yourwebsite.com</span></div>
+        <div id="chip"><span id="chipPlan">PLAN</span><span id="chipBuild">BUILDING…</span><span id="chipLive">LIVE ✦</span></div>
+      </div>
+      <div id="body">
+        <!-- wireframe -->
+        <div id="wire" class="abs" style="inset:0">
+          <div id="wgrid"></div>
+          <div id="wNav" class="wb" style="left:40px;top:28px;width:1360px;height:56px"><div class="bar" style="left:14px;top:19px;width:160px"></div><div class="bar" style="left:660px;top:19px;width:330px"></div><div class="bar" style="left:1196px;top:12px;width:146px;height:28px"></div></div>
+          <div id="wHero" class="wb" style="left:40px;top:124px;width:700px;height:420px">
+            <div class="bar" style="left:22px;top:40px;width:470px;height:42px"></div><div class="bar" style="left:22px;top:100px;width:600px;height:42px"></div><div class="bar" style="left:22px;top:160px;width:220px;height:42px"></div>
+            <div class="bar" style="left:22px;top:250px;width:520px"></div><div class="bar" style="left:22px;top:278px;width:380px"></div>
+            <div class="wb" style="left:22px;top:330px;width:150px;height:52px"></div><div class="wb" style="left:186px;top:330px;width:150px;height:52px"></div>
+          </div>
+          <div id="wImg" class="wb" style="left:790px;top:124px;width:610px;height:440px;background:repeating-linear-gradient(135deg,#f3f3f3 0 14px,#fafafa 14px 28px)">
+            <svg width="606" height="436" style="position:absolute;left:0;top:0"><path d="M0 0 L606 436 M606 0 L0 436" stroke="#c4c4c4" stroke-width="2"/></svg>
+            <div class="note" style="left:200px;top:186px;background:#fafafa;padding:6px 10px;color:#666">Hero photo —
+your shop or team</div>
+          </div>
+          <div class="note" style="left:40px;top:594px">Service cards, 3 key offers</div>
+          <div id="wC1" class="wb" style="left:40px;top:624px;width:420px;height:100px"><div class="bar" style="left:80px;top:30px;width:150px"></div><div class="bar" style="left:80px;top:56px;width:230px;height:10px"></div><div class="wb" style="left:18px;top:26px;width:44px;height:44px"></div></div>
+          <div id="wC2" class="wb" style="left:510px;top:624px;width:420px;height:100px"><div class="bar" style="left:80px;top:30px;width:150px"></div><div class="bar" style="left:80px;top:56px;width:230px;height:10px"></div><div class="wb" style="left:18px;top:26px;width:44px;height:44px"></div></div>
+          <div id="wC3" class="wb" style="left:980px;top:624px;width:420px;height:100px"><div class="bar" style="left:80px;top:30px;width:150px"></div><div class="bar" style="left:80px;top:56px;width:230px;height:10px"></div><div class="wb" style="left:18px;top:26px;width:44px;height:44px"></div></div>
+        </div>
+
+        <!-- designed: each .mv is mirrored across x = 720 when the language flips -->
+        <div id="nLogo" class="mv" style="left:40px;top:34px;width:320px;height:44px">
+          <div class="en row"><div class="sq">Y</div><span class="nm">Your Business</span></div>
+          <div class="ar row" id="nLogoAr"><span class="nm">عملك</span><div class="sq" style="font-family:var(--ar)">ع</div></div>
+        </div>
+        <div id="nLinks" class="mv" style="left:690px;top:34px;width:420px;height:44px">
+          <div class="en links"><span>Services</span><span>About</span><span>Gallery</span><span>Contact</span></div>
+          <div class="ar links"><span>الخدمات</span><span>من نحن</span><span>المعرض</span><span>تواصل</span></div>
+        </div>
+        <div id="nLang" class="mv" style="left:1150px;top:34px;width:70px;height:44px">
+          <div class="en"><span id="langEn" class="lang">العربية</span></div>
+          <div class="ar"><span class="lang lat" style="direction:ltr">English</span></div>
+        </div>
+        <div id="nWa" class="mv" style="left:1250px;top:34px;width:150px;height:44px">
+          <div class="en"><span class="wa">WhatsApp</span></div>
+          <div class="ar"><span class="wa ar">واتساب</span></div>
+        </div>
+        <div id="hBadge" class="mv" style="left:40px;top:128px;width:300px;height:34px">
+          <div class="en"><span class="badge"><i></i>Example layout</span></div>
+          <div class="ar"><span class="badge ar"><i></i>تصميم توضيحي</span></div>
+        </div>
+        <div id="hHead" class="mv" style="left:40px;top:176px;width:700px;height:230px">
+          <div class="en" style="width:700px;height:230px"><div id="hl1" class="hl" style="top:0;color:#9a9a9a">Your business,</div><div id="hl2" class="hl" style="top:72px">open online, day and</div><div id="hl3" class="hl" style="top:144px">night.</div></div>
+          <div class="ar hla" style="width:700px;top:-6px"><span style="color:#9a9a9a">عملك،</span>
+مفتوح على الإنترنت
+ليلا ونهارا.</div>
+        </div>
+        <div id="hSub" class="mv" style="left:40px;top:418px;width:600px;height:60px">
+          <div class="en sub">Show your services, your best work and where to find you, and let customers reach you in one tap.</div>
+          <div class="ar sub" style="width:600px">اعرض خدماتك وأفضل أعمالك ومكانك، ودع العملاء يتواصلون معك بلمسة واحدة.</div>
+        </div>
+        <div id="hBtns" class="mv" style="left:40px;top:500px;width:340px;height:52px">
+          <div class="en btnrow"><span class="btn k">Message us</span><span class="btn o">Our services</span></div>
+          <div class="ar btnrow"><span id="bMsgAr" class="btn k">راسلنا</span><span class="btn o">خدماتنا</span></div>
+        </div>
+        <div id="panel" class="mv" style="left:790px;top:124px;width:610px;height:440px">
+          <div class="lay en" style="width:610px;height:440px">
+            <div class="ph" style="left:24px">■ ■  ENQUIRIES</div><div class="chipS" style="right:24px">SAMPLE</div>
+            <div class="cc" style="left:24px"><div class="cnum" style="left:18px">0</div><div class="clab" style="left:18px">MESSAGES THIS MONTH</div><div class="cex" style="left:18px">Example figures</div></div>
+            <div class="bars"><i style="height:30%"></i><i style="height:44%"></i><i style="height:36%"></i><i style="height:58%"></i><i style="height:47%"></i><i style="height:66%"></i><i style="height:54%"></i><i style="height:72%"></i><i style="height:6%;background:#f2f2f2"></i></div>
+            <div class="ov" style="left:24px">OVERVIEW</div>
+          </div>
+          <div class="lay ar" style="width:610px;height:440px;direction:ltr">
+            <div class="ph ar" style="right:24px">الاستفسارات  ■ ■</div><div class="chipS ar" style="left:24px;font-family:var(--ar);letter-spacing:0;font-size:14px">مثال</div>
+            <div class="cc ar" style="right:24px"><div id="c0" class="cnum" style="right:18px">0</div><div id="c1" class="cnum" style="right:18px">1</div><div class="clab" style="right:18px">رسائل هذا الشهر</div><div class="cex" style="right:18px">أرقام توضيحية</div></div>
+            <div class="bars" style="flex-direction:row-reverse"><i style="height:30%"></i><i style="height:44%"></i><i style="height:36%"></i><i style="height:58%"></i><i style="height:47%"></i><i style="height:66%"></i><i style="height:54%"></i><i style="height:72%"></i><i id="barNew" style="height:6%;background:#f2f2f2"></i></div>
+            <div class="ov" style="right:24px">نظرة عامة</div>
+            <div id="toast"><b>✓</b><div class="t1">الموقع منشور</div><div class="t2">على نطاقك الخاص</div></div>
+          </div>
+        </div>
+        <div id="card1" class="mv card" style="left:40px;top:624px;width:420px;height:100px">
+          <div class="en" style="width:420px;height:100px"><div class="ic" style="left:20px">◆</div><div class="ct" style="left:84px">Services</div><div class="cs" style="left:84px">Everything you offer, clearly</div><div class="ca" style="right:18px">↗</div></div>
+          <div class="ar" style="width:420px;height:100px"><div class="ic" style="right:20px">◆</div><div class="ct" style="right:84px">الخدمات</div><div class="cs" style="right:84px">كل ما تقدمه بوضوح</div><div class="ca" style="left:18px">↖</div></div>
+        </div>
+        <div id="card2" class="mv card" style="left:510px;top:624px;width:420px;height:100px">
+          <div class="en" style="width:420px;height:100px"><div class="ic" style="left:20px">◈</div><div class="ct" style="left:84px">Gallery</div><div class="cs" style="left:84px">Your best work, on every screen</div><div class="ca" style="right:18px">↗</div></div>
+          <div class="ar" style="width:420px;height:100px"><div class="ic" style="right:20px">◈</div><div class="ct" style="right:84px">المعرض</div><div class="cs" style="right:84px">أفضل أعمالك على كل شاشة</div><div class="ca" style="left:18px">↖</div></div>
+        </div>
+        <div id="card3" class="mv card" style="left:980px;top:624px;width:420px;height:100px">
+          <div class="en" style="width:420px;height:100px"><div class="ic" style="left:20px">✦</div><div class="ct" style="left:84px">Location</div><div class="cs" style="left:84px">Map, hours and directions</div><div class="ca" style="right:18px">↗</div></div>
+          <div class="ar" style="width:420px;height:100px"><div class="ic" style="right:20px">✦</div><div class="ct" style="right:84px">الموقع</div><div class="cs" style="right:84px">الخريطة والمواعيد والاتجاهات</div><div class="ca" style="left:18px">↖</div></div>
+        </div>
+      </div>
+      <div id="cursor"><svg width="30" height="42" viewBox="0 0 30 42"><path d="M0 0 L0 34 L9 26 L15 40 L22 37 L16 23 L28 23 Z" fill="#111" stroke="#fff" stroke-width="2.5" stroke-linejoin="miter" paint-order="stroke"/></svg><span>Jafer</span></div>
+    </div>
+  </div></section>
+
+  <!-- 5  REAL WORK (446-524) -->
+  <section id="s5" class="scene">
+    <div id="strip">
+      <div class="cv" style="left:0"><div class="img"><img src="assets/img/bareeqalmas.jpg" alt=""></div><div class="n">Bareeq Almas</div><div class="c">Hospitality Services</div></div>
+      <div class="cv" style="left:850px"><div class="img"><img src="assets/img/eishan.jpg" alt=""></div><div class="n">Eishan</div><div class="c">Engineering &amp; Oil Services</div></div>
+      <div class="cv" style="left:1700px"><div class="img"><img src="assets/img/uowa-center.jpg" alt=""></div><div class="n">Computer Center</div><div class="c">University IT Center</div></div>
+      <div class="cv" id="cv4" style="left:2550px"><div class="img" id="cv4img"><img src="assets/img/aljawhara.jpg" alt=""></div><div id="cv4cap"><div class="n">Al-Jawhara Archive</div><div class="c">Desktop App &amp; Landing Page</div></div></div>
+    </div>
+  </section>
+
+  <!-- 6  NAME (524-600) -->
+  <section id="s6" class="scene"><div id="lockup">
+    <img id="hs" src="assets/img/headshot.jpg" alt="">
+    <div id="name">Jafer Nouri</div>
+    <i id="avail"></i>
+    <div id="line">Tell me about your business.</div>
+  </div></section>
+</div>
+
+<script src="./runtime/vendor/gsap.min.js"></script>
+<script src="./runtime/motion.js"></script>
+<script>
+/* SEEK CONTRACT: every frame is a pure function of t. Authored only through Motion calls (or M.tl.fromTo with immediateRender:false). */
+const M = window.__M = Motion.film({ fps: 30, duration: 590 / 30, width: 1920, height: 1080, clock: 'smooth' });
+
+/* camera helper: origin 0 0, centre scene point (px, py) at scale s */
+const C = (s, px, py) => ({ scale: s, x: 960 - s * px, y: 540 - s * py });
+
+/* ================= the lit dot lattice (his site's own canvas texture), drawn from t ================= */
+(() => {
+  const cv = document.getElementById('field'), g = cv.getContext('2d');
+  const SP = 24, R0 = 1.15;
+  const draw = t => {
+    g.fillStyle = '#0e0e0e'; g.fillRect(0, 0, 1920, 1080);
+    const ph = t * 0.32;
+    for (let y = SP / 2; y < 1080; y += SP) for (let x = SP / 2; x < 1920; x += SP) {
+      const wy = 560 + 230 * Math.sin(x / 470 + ph) + 90 * Math.sin(x / 190 - ph * 1.7);
+      const d = (y - wy) / 70, b = Math.exp(-d * d);
+      const a = 0.07 + 0.55 * b;
+      g.fillStyle = 'rgba(232,232,232,' + a.toFixed(3) + ')';
+      const r = R0 + 0.9 * b;
+      g.fillRect(x - r, y - r, r * 2, r * 2);
+    }
+  };
+  const proxy = {}; let last = -1;
+  Object.defineProperty(proxy, 't', { get: () => last, set: v => { if (v !== last) { last = v; draw(v); } } });
+  M.tl.fromTo(proxy, { t: 0 }, { t: M.duration, duration: M.duration, ease: 'none', immediateRender: false, lazy: false }, 0);
+})();
+
+/* ================= 1  HOOK  0-105: the first message ================= */
+M.camera('#cam1', [[0, C(1.5, 960, 540)], [44, C(1.53, 985, 560), 'cruise'], [66, C(1.3, 990, 540), 'glide'], [84, C(1.32, 990, 540), 'cruise']], { origin: '0 0' });
+M.type('#typed', { at: 4, style: 'prompt', seed: 7, caret: '#caret', caretOff: 52 });
+M.hide('#ph', 4);
+M.kf('#send', 'scale', [[48, 1], [51, .86, 'gentleIn'], [58, 1, 'softLand']]);
+M.hide('#typed', 52); M.mark(51, 'press', 'send');
+M.enter('#bubble', { at: 52, frames: 12, ease: 'softLand', from: { y: 118, scale: .97 }, smear: { axis: 'y', px: 26, frames: 3 } });
+M.enter('#dots', { at: 70, frames: 8, ease: 'softLand', from: { y: 20 } });
+['#dots i:nth-child(1)', '#dots i:nth-child(2)', '#dots i:nth-child(3)'].forEach((s, i) =>
+  M.kf(s, 'opacity', [[70, .35], [74 + i * 3, 1], [80 + i * 3, .35], [86 + i * 3, 1], [92 + i * 3, .35]]));
+// dive into the sent bubble: constant-octave zoom, blur ramps into the cut (matched by s2 opening blurred)
+const w1 = M.wrap('#cam1');
+// bubble centre on screen at f84: cam scale 1.32 centred on (990,540); bubble centre in scene = (340+308+450, 305+252+42) = (1098, 599)
+M.dive(w1, { at: 84, frames: 21, perStep: 1.13, origin: [960 + 1.32 * (1098 - 990), 540 + 1.32 * (599 - 540)] });
+M.kf(w1, 'filter', [[92, 0], [105, 18, 'gentleIn']], { fmt: v => 'blur(' + v + 'px)' });
+
+/* ================= 2  PLAN -> BUILD  105-225 ================= */
+M.cut(105, { hide: ['#s1'], show: ['#s2'], label: 'bubble becomes the hero block' });
+M.camera('#cam2', [
+  [105, C(2.6, 630, 456)],
+  [128, C(1.0, 960, 540), 'snapSettle'],
+  [150, C(1.02, 960, 540), 'cruise'],
+  [202, C(1.04, 960, 540), 'cruise'],
+  [234, C(1.42, 1210, 390), 'softInOut'],
+  [252, C(1.48, 1240, 380), 'cruise'],
+  [282, C(1.0, 960, 540), 'glide'],
+  [296, C(1.0, 960, 540)],
+  [326, C(1.55, 1290, 446), 'softInOut'],
+  [350, C(1.6, 1290, 446), 'cruise'],
+  [368, C(1.14, 980, 560), 'glide'],
+  [396, C(1.18, 1000, 570), 'cruise'],
+  [410, C(2.3, 761, 400), 'whip'],
+  [436, C(2.36, 761, 400), 'cruise'],
+  [446, C(2.36, 761 + 760, 400), 'gentleIn'],
+], { origin: '0 0' });
+M.kf('#cam2', 'filter', [[105, 22], [114, 0, 'softLand']], { fmt: v => 'blur(' + v + 'px)' });
+
+// stage chips / url: plan -> build -> live
+M.show('#urlPlan', 105, 150); M.show('#chipPlan', 105, 150);
+M.show('#urlBuild', 150, 362); M.show('#chipBuild', 150, 362);
+M.show('#urlLive', 362); M.show('#chipLive', 362); M.mark(362, 'show', 'site is live');
+
+// wire -> design, hard replacement in a 2 f cascade
+const B0 = 150;
+M.hide('#wgrid', B0); M.hide('#wNav', B0);
+['#nLogo', '#nLinks', '#nLang', '#nWa'].forEach((s, i) => M.enter(s, { at: B0 + i, frames: 10, ease: 'softLand', from: { y: -14 } }));
+M.hide('#wHero', B0 + 2);
+M.enter('#hBadge', { at: B0 + 2, frames: 8, ease: 'softLand', from: { y: 16 } });
+M.show('#hHead', B0 + 2);
+M.words('#hl1', { at: B0 + 3, mech: 'rise', dist: 44, gaps: 3, frames: 11 });
+M.words('#hl2', { at: B0 + 8, mech: 'rise', dist: 44, gaps: 3, frames: 11 });
+M.words('#hl3', { at: B0 + 16, mech: 'rise', dist: 44, gaps: 3, frames: 11 });
+M.enter('#hSub', { at: B0 + 14, frames: 10, ease: 'softLand', from: { y: 18 } });
+M.enter('#hBtns', { at: B0 + 18, frames: 10, ease: 'softLand', from: { y: 18 } });
+M.hide('#wImg', B0 + 6);
+M.enter('#panel', { at: B0 + 6, frames: 12, ease: 'snapSettle', from: { scale: .965 } });
+M.hide('.note', B0 + 10);
+['#card1', '#card2', '#card3'].forEach((s, i) => { M.hide('#wC' + (i + 1), B0 + 12 + 2 * i); M.enter(s, { at: B0 + 12 + 2 * i, frames: 10, ease: 'softLand', from: { y: 24 } }); });
+
+/* ================= 3  THE MIRROR  225-360 (hero) ================= */
+M.cursor('#cursor', { keys: [
+  [226, 1560, 980, 2.6, -18], [238, 1330, 420, 1.55, -6], [249, 1176, 122, 1, 0],
+  [372, 1176, 122, 1, 0], [392, 1318, 588, 1, 0], [446, 1318, 588, 1, 0]], ease: 'glide' });
+M.press('#cursor', '#langEn', { at: 256, cursorDepth: .8, targetDepth: .82, lag: 1, frames: 3, release: true });
+
+// every mover crosses to x' = 1440 - x - w; it leaves in Latin and lands in Arabic (swap under the smear)
+const MOVERS = [ // [selector, left, width, start]
+  ['#nLang', 1150, 70, 258], ['#nWa', 1250, 150, 258], ['#nLinks', 690, 420, 259], ['#nLogo', 40, 320, 259],
+  ['#panel', 790, 610, 260], ['#hBadge', 40, 300, 261], ['#hHead', 40, 700, 261], ['#hSub', 40, 600, 262],
+  ['#hBtns', 40, 340, 262], ['#card3', 980, 420, 263], ['#card2', 510, 420, 264], ['#card1', 40, 420, 264]];
+MOVERS.forEach(([s, x, w, at]) => {
+  const dx = (1440 - x - w) - x, swap = at + 4;
+  M.kf(s, 'x', [[at, 0], [at + 18, dx, 'whip']]);
+  M.kf(s, '--b', [[at, 0], [at + 5, Math.min(6, Math.abs(dx) / 140)], [at + 15, 0, 'softLand']], { fmt: v => v + 'px' });
+  M.hide(s + ' > .en', swap); M.show(s + ' > .ar', swap);
+});
+M.mark(258, 'whip', 'page mirrors to Arabic');
+
+/* ================= 4  LIVE + THE SITE'S FIRST MESSAGE  360-446 ================= */
+M.enter('#toast', { at: 368, frames: 10, ease: 'softLand', from: { y: 40 } });
+M.press('#cursor', '#bMsgAr', { at: 396, cursorDepth: .8, targetDepth: .84, lag: 1, frames: 3, release: true });
+M.show('#c1', 412); M.hide('#c0', 412); M.mark(412, 'count', 'first message: 0 -> 1');
+M.kf('#barNew', 'height', [[412, 6], [424, 92, 'softLand']], { fmt: v => v + '%' });
+
+/* ================= 5  REAL WORK  446-524 ================= */
+M.cut(446, { hide: ['#s2'], show: ['#s5'], label: 'whip into the real builds' });
+M.kf('#strip', 'x', [[446, 760], [472, -980, 'cruise'], [508, -1970, 'softLand'], [524, -2000, 'cruise']]);
+// the last cover contracts to a square at its own centre (container replacement)
+M.kf('#cv4img', 'clipPath', [[512, 0], [524, 95, 'gentleIn']], { fmt: v => 'inset(0px ' + v + 'px 0px ' + v + 'px)' });
+M.kf('#cv4img', 'scale', [[512, 1], [524, .3, 'gentleIn']]);
+M.exit('#cv4cap', { at: 510, frames: 10, ease: 'accelExit', to: { y: 60 }, hide: true });
+
+/* ================= 6  NAME  524-590 ================= */
+M.cut(524, { hide: ['#s5'], show: ['#s6'], label: 'cover becomes the headshot' });
+// cover4 centre on screen at f524: strip x -2000 + 2550 + 380 = 930, y = 160 + 285 = 445
+M.kf('#hs', 'x', [[524, 0], [540, 518 - 850, 'softLand']]);
+M.kf('#hs', 'y', [[524, -10], [540, 15, 'softLand']]);
+M.kf('#hs', 'scale', [[524, 1.06], [540, 1, 'softLand']]);
+M.words('#name', { at: 528, mech: 'rise', dist: 70, gaps: 4, frames: 13 });
+M.words('#line', { at: 538, mech: 'rise', dist: 30, gaps: 3, frames: 11 });
+M.show('#avail', 548);
+M.drift('#lockup', { prop: 'scale', from: 1, to: .955, start: 540, end: 590 });
+
+window.__ready = Motion.loaded().then(() => { if (/selftest/.test(location.search)) Motion.selfTest(M, { samples: 24 }); });
+</script>
+</body>
+</html>

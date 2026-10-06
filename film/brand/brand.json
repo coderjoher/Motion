@@ -1,0 +1,956 @@
+{
+ "url": "https://portfolio-livid-delta-tesygsr8ax.vercel.app/",
+ "finalUrl": "https://portfolio-livid-delta-tesygsr8ax.vercel.app/",
+ "capturedAt": "2026-10-06T18:54:37.925Z",
+ "viewport": {
+  "w": 1920,
+  "h": 1080
+ },
+ "docHeight": 11022,
+ "name": "Jafer Nouri — Portfolio",
+ "title": "Jafer Nouri — Portfolio",
+ "description": "Fast, responsive websites and web apps that turn your vision into products people love to use.",
+ "tagline": "Design that delivers results.",
+ "lang": "en",
+ "themeColorMeta": null,
+ "colorSchemeMeta": null,
+ "manifest": null,
+ "copy": {
+  "h1": [
+   "Design that delivers results."
+  ],
+  "h2": [
+   "Latest Projects",
+   "What I do.",
+   "From first message to live site.",
+   "Building websites that solve real problems.",
+   "Your questions answered.",
+   "Ready to start your next project?",
+   "Let’s build incredible work together."
+  ],
+  "h3": [
+   "Plan together",
+   "Build in two languages",
+   "Launch and support",
+   "Still not sure? Ask me on WhatsApp."
+  ],
+  "heroLine": "Design that",
+  "ctas": [
+   {
+    "text": "Contact",
+    "bg": "#0e0e0e",
+    "color": "#f2f2f2",
+    "border": null,
+    "radius": 0,
+    "filled": true,
+    "inHeader": true,
+    "inHero": true,
+    "top": 36,
+    "w": 86,
+    "h": 32
+   },
+   {
+    "text": "You Book a call with me",
+    "bg": "#f2f2f2",
+    "color": "#f2f2f2",
+    "border": null,
+    "radius": 0,
+    "filled": true,
+    "inHeader": false,
+    "inHero": true,
+    "top": 550,
+    "w": 183,
+    "h": 44
+   },
+   {
+    "text": "Start a project",
+    "bg": "#ededed",
+    "color": "#121212",
+    "border": null,
+    "radius": 0,
+    "filled": true,
+    "inHeader": false,
+    "inHero": false,
+    "top": 9899,
+    "w": 125,
+    "h": 44
+   },
+   {
+    "text": "Book a call",
+    "bg": "#121212",
+    "color": "#ededed",
+    "border": null,
+    "radius": 0,
+    "filled": true,
+    "inHeader": false,
+    "inHero": false,
+    "top": 9899,
+    "w": 104,
+    "h": 44
+   },
+   {
+    "text": "Instagram Link",
+    "bg": "#f1f1f1",
+    "color": "#171717",
+    "border": null,
+    "radius": 0,
+    "filled": true,
+    "inHeader": false,
+    "inHero": false,
+    "top": 8493,
+    "w": 30,
+    "h": 30
+   },
+   {
+    "text": "Linkedin Link",
+    "bg": "#f1f1f1",
+    "color": "#171717",
+    "border": null,
+    "radius": 0,
+    "filled": true,
+    "inHeader": false,
+    "inHero": false,
+    "top": 8493,
+    "w": 30,
+    "h": 30
+   },
+   {
+    "text": "Message me",
+    "bg": "#f2f2f2",
+    "color": "#f2f2f2",
+    "border": null,
+    "radius": 0,
+    "filled": true,
+    "inHeader": false,
+    "inHero": false,
+    "top": 9145,
+    "w": 136,
+    "h": 44
+   }
+  ],
+  "nav": [
+   "Jafer Nouri",
+   "Work",
+   "Services",
+   "Process",
+   "FAQ"
+  ],
+  "sentences": [
+   "Strategic design that drives growth, not just looks good. I create everything your brand needs to attract customers and turn them into sales.",
+   "A fast, professional website in Arabic and English that shows what you do and makes it easy to contact you.",
+   "One focused page for your ads, a new product or an event — built to turn visitors into messages and calls.",
+   "Speed, mobile and content fixes for the site you already have, so it keeps working for your business.",
+   "I love turning ideas into something real through code. What started as a hobby turned into a career when I discovered how a well-built website can look great and work better at the same time.",
+   "Tell me what you are building and I will come back with a plan, a timeline and a price."
+  ]
+ },
+ "colors": {
+  "theme": "dark",
+  "monochrome": true,
+  "ground": [
+   {
+    "hex": "#0e0e0e",
+    "share": 0.885,
+    "sources": [
+     "dom",
+     "pixels"
+    ]
+   },
+   {
+    "hex": "#fbfbfb",
+    "share": 0.053,
+    "sources": [
+     "pixels",
+     "dom"
+    ]
+   }
+  ],
+  "ink": {
+   "hex": "#f2f2f2",
+   "contrastOnGround": 17.24,
+   "source": "computed colour of the largest heading (h1 \"Design that delivers results.\", 72px)"
+  },
+  "inkSoft": {
+   "hex": "#8f8f8f",
+   "contrastOnGround": 5.97,
+   "note": "body copy"
+  },
+  "accentCandidates": {
+   "note": "no CSS/DOM accent: saturated dominant colours sampled from screens/ and media/ imagery",
+   "items": [
+    {
+     "hex": "#25d366",
+     "file": "screens/04.jpg",
+     "share": 0.00148,
+     "sharePct": 0.15
+    },
+    {
+     "hex": "#289c52",
+     "file": "screens/04.jpg",
+     "share": 0.00145,
+     "sharePct": 0.14
+    },
+    {
+     "hex": "#1a7337",
+     "file": "screens/01.jpg",
+     "share": 0.00005,
+     "sharePct": 0
+    },
+    {
+     "hex": "#56c985",
+     "file": "screens/04.jpg",
+     "share": 0.00007,
+     "sharePct": 0.01
+    }
+   ]
+  },
+  "inkMuted": {
+   "hex": "#545454",
+   "contrastOnGround": 2.55
+  },
+  "accents": [
+   {
+    "hex": "#0e0e0e",
+    "role": "accent (primary) [neutral]",
+    "score": 30,
+    "sources": [
+     "CTA background"
+    ]
+   }
+  ],
+  "ctaBg": "#0e0e0e",
+  "link": "#f2f2f2",
+  "palette": [
+   {
+    "hex": "#0e0e0e",
+    "role": "ground (dark theme)",
+    "share": 0.885
+   },
+   {
+    "hex": "#fbfbfb",
+    "role": "surface/ground 2",
+    "share": 0.053
+   },
+   {
+    "hex": "#f2f2f2",
+    "role": "ink (headline / logo ink)",
+    "contrast": 17.2
+   },
+   {
+    "hex": "#8f8f8f",
+    "role": "ink-soft (body copy)",
+    "contrast": 6
+   },
+   {
+    "hex": "#545454",
+    "role": "ink muted",
+    "contrast": 2.5
+   },
+   {
+    "hex": "#25d366",
+    "role": "accent candidate (from imagery)",
+    "sources": [
+     "screens/04.jpg 0.15% of pixels"
+    ]
+   },
+   {
+    "hex": "#289c52",
+    "role": "accent candidate (from imagery)",
+    "sources": [
+     "screens/04.jpg 0.14% of pixels"
+    ]
+   },
+   {
+    "hex": "#1a7337",
+    "role": "accent candidate (from imagery)",
+    "sources": [
+     "screens/01.jpg 0% of pixels"
+    ]
+   },
+   {
+    "hex": "#56c985",
+    "role": "accent candidate (from imagery)",
+    "sources": [
+     "screens/04.jpg 0.01% of pixels"
+    ]
+   }
+  ],
+  "pixelPalette": [
+   {
+    "hex": "#0f0f0f",
+    "share": 0.837
+   },
+   {
+    "hex": "#fbfbfb",
+    "share": 0.077
+   },
+   {
+    "hex": "#242726",
+    "share": 0.015
+   },
+   {
+    "hex": "#434243",
+    "share": 0.014
+   },
+   {
+    "hex": "#838482",
+    "share": 0.012
+   },
+   {
+    "hex": "#eaeaea",
+    "share": 0.009
+   },
+   {
+    "hex": "#646363",
+    "share": 0.009
+   },
+   {
+    "hex": "#d5d6d5",
+    "share": 0.005
+   },
+   {
+    "hex": "#333433",
+    "share": 0.005
+   },
+   {
+    "hex": "#bcbcbc",
+    "share": 0.004
+   }
+  ],
+  "domBackgrounds": [
+   {
+    "hex": "#0e0e0e",
+    "share": 0.858
+   },
+   {
+    "hex": "#121212",
+    "share": 0.047
+   },
+   {
+    "hex": "#1c1c1c",
+    "share": 0.032
+   },
+   {
+    "hex": "#ffffff",
+    "share": 0.026
+   },
+   {
+    "hex": "#0a0a0a",
+    "share": 0.015
+   },
+   {
+    "hex": "#171717",
+    "share": 0.012
+   },
+   {
+    "hex": "#12b33f",
+    "share": 0.004
+   },
+   {
+    "hex": "#fafafa",
+    "share": 0.002
+   },
+   {
+    "hex": "#f0f0f0",
+    "share": 0.001
+   },
+   {
+    "hex": "#dedede",
+    "share": 0.001
+   }
+  ],
+  "textColors": [
+   {
+    "hex": "#f2f2f2",
+    "share": 0.399
+   },
+   {
+    "hex": "#8f8f8f",
+    "share": 0.286
+   },
+   {
+    "hex": "#b5b5b5",
+    "share": 0.12
+   },
+   {
+    "hex": "#ededed",
+    "share": 0.096
+   },
+   {
+    "hex": "#ffffff",
+    "share": 0.072
+   },
+   {
+    "hex": "#545454",
+    "share": 0.011
+   },
+   {
+    "hex": "#171717",
+    "share": 0.008
+   },
+   {
+    "hex": "#121212",
+    "share": 0.004
+   }
+  ],
+  "cssVars": [
+   {
+    "name": "--lf-white",
+    "value": "#171717",
+    "hex": "#171717"
+   },
+   {
+    "name": "--lf-grey-50",
+    "value": "#0e0e0e",
+    "hex": "#0e0e0e"
+   },
+   {
+    "name": "--lf-grey-75",
+    "value": "#141414",
+    "hex": "#141414"
+   },
+   {
+    "name": "--lf-grey-100",
+    "value": "#1e1e1e",
+    "hex": "#1e1e1e"
+   },
+   {
+    "name": "--lf-grey-200",
+    "value": "#2b2b2b",
+    "hex": "#2b2b2b"
+   },
+   {
+    "name": "--lf-grey-300",
+    "value": "#4d4d4d",
+    "hex": "#4d4d4d"
+   },
+   {
+    "name": "--lf-grey-400",
+    "value": "#8f8f8f",
+    "hex": "#8f8f8f"
+   },
+   {
+    "name": "--lf-grey-600",
+    "value": "#b5b5b5",
+    "hex": "#b5b5b5"
+   },
+   {
+    "name": "--lf-grey-900",
+    "value": "#ededed",
+    "hex": "#ededed"
+   },
+   {
+    "name": "--lf-black",
+    "value": "#f2f2f2",
+    "hex": "#f2f2f2"
+   },
+   {
+    "name": "--lf-panel",
+    "value": "#1c1c1c",
+    "hex": "#1c1c1c"
+   },
+   {
+    "name": "--lf-panel-deep",
+    "value": "#121212",
+    "hex": "#121212"
+   },
+   {
+    "name": "--lf-on-panel",
+    "value": "#ededed",
+    "hex": "#ededed"
+   },
+   {
+    "name": "--lf-on-panel-muted",
+    "value": "#ffffff8c",
+    "hex": "#ffffff"
+   },
+   {
+    "name": "--lf-green",
+    "value": "#2fd45f",
+    "hex": "#2fd45f"
+   },
+   {
+    "name": "--lf-rule",
+    "value": "#292929",
+    "hex": "#292929"
+   },
+   {
+    "name": "--lf-ring-strong",
+    "value": "#4d4d4d",
+    "hex": "#4d4d4d"
+   },
+   {
+    "name": "--lf-ring-light",
+    "value": "#2b2b2b",
+    "hex": "#2b2b2b"
+   },
+   {
+    "name": "--lf-cursor-bg",
+    "value": "#bebebebf",
+    "hex": "#bebebe"
+   },
+   {
+    "name": "--dk-white",
+    "value": "#171717",
+    "hex": "#171717"
+   },
+   {
+    "name": "--dk-grey-50",
+    "value": "#0e0e0e",
+    "hex": "#0e0e0e"
+   },
+   {
+    "name": "--dk-grey-75",
+    "value": "#141414",
+    "hex": "#141414"
+   },
+   {
+    "name": "--dk-grey-100",
+    "value": "#1e1e1e",
+    "hex": "#1e1e1e"
+   },
+   {
+    "name": "--dk-grey-200",
+    "value": "#2b2b2b",
+    "hex": "#2b2b2b"
+   },
+   {
+    "name": "--dk-grey-300",
+    "value": "#4d4d4d",
+    "hex": "#4d4d4d"
+   },
+   {
+    "name": "--dk-grey-400",
+    "value": "#8f8f8f",
+    "hex": "#8f8f8f"
+   },
+   {
+    "name": "--dk-grey-600",
+    "value": "#b5b5b5",
+    "hex": "#b5b5b5"
+   },
+   {
+    "name": "--dk-grey-900",
+    "value": "#ededed",
+    "hex": "#ededed"
+   },
+   {
+    "name": "--dk-black",
+    "value": "#f2f2f2",
+    "hex": "#f2f2f2"
+   },
+   {
+    "name": "--dk-green",
+    "value": "#2fd45f",
+    "hex": "#2fd45f"
+   },
+   {
+    "name": "--dk-rule",
+    "value": "#292929",
+    "hex": "#292929"
+   },
+   {
+    "name": "--dk-panel",
+    "value": "#1c1c1c",
+    "hex": "#1c1c1c"
+   },
+   {
+    "name": "--dk-panel-deep",
+    "value": "#121212",
+    "hex": "#121212"
+   },
+   {
+    "name": "--dk-on-panel",
+    "value": "#ededed",
+    "hex": "#ededed"
+   },
+   {
+    "name": "--dk-on-panel-muted",
+    "value": "#ffffff8c",
+    "hex": "#ffffff"
+   },
+   {
+    "name": "--dk-ring-strong",
+    "value": "#4d4d4d",
+    "hex": "#4d4d4d"
+   },
+   {
+    "name": "--dk-ring-light",
+    "value": "#2b2b2b",
+    "hex": "#2b2b2b"
+   },
+   {
+    "name": "--dk-cursor-bg",
+    "value": "#bebebebf",
+    "hex": "#bebebe"
+   }
+  ]
+ },
+ "fonts": {
+  "roles": {
+   "heading": {
+    "family": "\"Space Grotesk\", Switzer, \"Switzer Placeholder\", ui-sans-serif, system-ui, sans-serif",
+    "weight": "500",
+    "size": "72px",
+    "style": "normal",
+    "letterSpacing": "-2.16px",
+    "lineHeight": "73.44px",
+    "textTransform": "none",
+    "color": "#f2f2f2",
+    "primaryFamily": "Space Grotesk",
+    "file": "fonts/space-grotesk-300-700.woff2",
+    "fileWeight": "300 700"
+   },
+   "body": {
+    "family": "Switzer, \"Switzer Placeholder\", ui-sans-serif, system-ui, sans-serif",
+    "weight": "500",
+    "size": "18px",
+    "style": "normal",
+    "letterSpacing": "-0.18px",
+    "lineHeight": "25.2px",
+    "textTransform": "none",
+    "color": "#f2f2f2",
+    "primaryFamily": "Switzer",
+    "file": "fonts/switzer-500.woff2",
+    "fileWeight": "500"
+   },
+   "button": {
+    "family": "Switzer, \"Switzer Placeholder\", ui-sans-serif, system-ui, sans-serif",
+    "weight": "500",
+    "size": "16px",
+    "style": "normal",
+    "letterSpacing": "normal",
+    "lineHeight": "24px",
+    "textTransform": "none",
+    "color": "#f2f2f2",
+    "primaryFamily": "Switzer",
+    "file": "fonts/switzer-500.woff2",
+    "fileWeight": "500"
+   },
+   "nav": {
+    "family": "Switzer, \"Switzer Placeholder\", ui-sans-serif, system-ui, sans-serif",
+    "weight": "500",
+    "size": "16px",
+    "style": "normal",
+    "letterSpacing": "normal",
+    "lineHeight": "24px",
+    "textTransform": "none",
+    "color": "#f2f2f2",
+    "primaryFamily": "Switzer",
+    "file": "fonts/switzer-500.woff2",
+    "fileWeight": "500"
+   }
+  },
+  "faces": [
+   {
+    "family": "Switzer",
+    "weight": "400",
+    "style": "normal",
+    "url": "https://portfolio-livid-delta-tesygsr8ax.vercel.app/fonts/Switzer-Regular.woff2",
+    "file": "fonts/switzer-400.woff2",
+    "bytes": 16728,
+    "used": true,
+    "range": null
+   },
+   {
+    "family": "Switzer",
+    "weight": "500",
+    "style": "normal",
+    "url": "https://portfolio-livid-delta-tesygsr8ax.vercel.app/fonts/Switzer-Medium.woff2",
+    "file": "fonts/switzer-500.woff2",
+    "bytes": 19564,
+    "used": true,
+    "range": null
+   },
+   {
+    "family": "Switzer",
+    "weight": "500",
+    "style": "italic",
+    "url": "https://portfolio-livid-delta-tesygsr8ax.vercel.app/fonts/Switzer-MediumItalic.woff2",
+    "file": "fonts/switzer-500-italic.woff2",
+    "bytes": 15836,
+    "used": false,
+    "range": null
+   },
+   {
+    "family": "Switzer",
+    "weight": "600",
+    "style": "normal",
+    "url": "https://portfolio-livid-delta-tesygsr8ax.vercel.app/fonts/Switzer-Semibold.woff2",
+    "file": "fonts/switzer-600.woff2",
+    "bytes": 19640,
+    "used": true,
+    "range": null
+   },
+   {
+    "family": "Switzer",
+    "weight": "600",
+    "style": "italic",
+    "url": "https://portfolio-livid-delta-tesygsr8ax.vercel.app/fonts/Switzer-SemiboldItalic.woff2",
+    "file": "fonts/switzer-600-italic.woff2",
+    "bytes": 15744,
+    "used": false,
+    "range": null
+   },
+   {
+    "family": "Space Grotesk",
+    "weight": "300 700",
+    "style": "normal",
+    "url": "https://portfolio-livid-delta-tesygsr8ax.vercel.app/fonts/SpaceGrotesk-Variable.woff2",
+    "file": "fonts/space-grotesk-300-700.woff2",
+    "bytes": 22288,
+    "used": true,
+    "range": null
+   }
+  ],
+  "loadedByPage": [
+   {
+    "family": "Switzer",
+    "weight": "400",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Switzer",
+    "weight": "500",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Switzer",
+    "weight": "500",
+    "style": "italic",
+    "status": "unloaded"
+   },
+   {
+    "family": "Switzer",
+    "weight": "600",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Switzer",
+    "weight": "600",
+    "style": "italic",
+    "status": "unloaded"
+   },
+   {
+    "family": "Switzer",
+    "weight": "700",
+    "style": "normal",
+    "status": "unloaded"
+   },
+   {
+    "family": "Switzer",
+    "weight": "700",
+    "style": "italic",
+    "status": "unloaded"
+   },
+   {
+    "family": "Switzer",
+    "weight": "900",
+    "style": "normal",
+    "status": "unloaded"
+   },
+   {
+    "family": "Switzer",
+    "weight": "900",
+    "style": "italic",
+    "status": "unloaded"
+   },
+   {
+    "family": "KO Sans",
+    "weight": "400",
+    "style": "normal",
+    "status": "unloaded"
+   },
+   {
+    "family": "KO Sans",
+    "weight": "500",
+    "style": "normal",
+    "status": "unloaded"
+   },
+   {
+    "family": "KO Sans",
+    "weight": "600",
+    "style": "normal",
+    "status": "unloaded"
+   },
+   {
+    "family": "KO Sans",
+    "weight": "700 900",
+    "style": "normal",
+    "status": "unloaded"
+   },
+   {
+    "family": "IBM Plex Sans Arabic",
+    "weight": "400",
+    "style": "normal",
+    "status": "unloaded"
+   },
+   {
+    "family": "IBM Plex Sans Arabic",
+    "weight": "500",
+    "style": "normal",
+    "status": "unloaded"
+   },
+   {
+    "family": "IBM Plex Sans Arabic",
+    "weight": "600",
+    "style": "normal",
+    "status": "unloaded"
+   },
+   {
+    "family": "IBM Plex Sans Arabic",
+    "weight": "700 900",
+    "style": "normal",
+    "status": "unloaded"
+   },
+   {
+    "family": "Guesswhat Exceptional",
+    "weight": "100 900",
+    "style": "normal",
+    "status": "unloaded"
+   },
+   {
+    "family": "Space Grotesk",
+    "weight": "300 700",
+    "style": "normal",
+    "status": "loaded"
+   }
+  ],
+  "mostUsed": [
+   {
+    "key": "Switzer|400",
+    "weight": 19743
+   },
+   {
+    "key": "Space Grotesk|500",
+    "weight": 14043
+   },
+   {
+    "key": "Switzer|600",
+    "weight": 12662
+   },
+   {
+    "key": "Switzer|500",
+    "weight": 4395
+   }
+  ],
+  "platformFonts": {
+   "h1": [
+    {
+     "family": "Space Grotesk Light",
+     "custom": true,
+     "glyphs": 29
+    }
+   ],
+   "body": [
+    {
+     "family": "Switzer Semibold",
+     "custom": true,
+     "glyphs": 11
+    }
+   ]
+  }
+ },
+ "logo": {
+  "file": "logo/logo.jpg",
+  "kind": "raster",
+  "source": "img https://portfolio-livid-delta-tesygsr8ax.vercel.app/images/headshot.jpg",
+  "fills": [],
+  "onDark": null,
+  "favicon": "logo/favicon.png",
+  "appIcon": "logo/app-icon.png",
+  "text": {
+   "text": "Services",
+   "font": "Switzer, \"Switzer Placeholder\", ui-sans-serif, system-ui, sans-serif",
+   "weight": "600",
+   "size": "14px",
+   "color": "#f2f2f2"
+  },
+  "candidates": [
+   {
+    "score": 11,
+    "why": [
+     "home-link",
+     "header",
+     "top"
+    ],
+    "members": [
+     "img 32x32 https://portfolio-livid-delta-tesygsr8ax.vercel.app/images/headshot.jpg"
+    ],
+    "lockup": false
+   },
+   {
+    "score": 4,
+    "why": [
+     "logo-attr"
+    ],
+    "members": [
+     "img 48x48 https://portfolio-livid-delta-tesygsr8ax.vercel.app/images/services/handoff-outline.svg"
+    ],
+    "lockup": false
+   },
+   {
+    "score": 4,
+    "why": [
+     "logo-attr"
+    ],
+    "members": [
+     "img 48x48 https://portfolio-livid-delta-tesygsr8ax.vercel.app/images/services/frontend-outline.svg"
+    ],
+    "lockup": false
+   },
+   {
+    "score": 4,
+    "why": [
+     "logo-attr"
+    ],
+    "members": [
+     "img 48x48 https://portfolio-livid-delta-tesygsr8ax.vercel.app/images/services/animation-outline.svg"
+    ],
+    "lockup": false
+   }
+  ]
+ },
+ "ogImage": "media/og-image.jpg",
+ "screens": [
+  {
+   "file": "screens/01.jpg",
+   "scrollY": 0
+  },
+  {
+   "file": "screens/02.jpg",
+   "scrollY": 1988
+  },
+  {
+   "file": "screens/03.jpg",
+   "scrollY": 3977
+  },
+  {
+   "file": "screens/04.jpg",
+   "scrollY": 5965
+  },
+  {
+   "file": "screens/05.jpg",
+   "scrollY": 7954
+  },
+  {
+   "file": "screens/06.jpg",
+   "scrollY": 9942
+  }
+ ],
+ "media": [
+  {
+   "file": "media/01.jpg",
+   "kind": "canvas",
+   "src": null,
+   "alt": null,
+   "w": 720,
+   "h": 720
+  }
+ ],
+ "mediaDropped": [],
+ "warnings": []
+}
