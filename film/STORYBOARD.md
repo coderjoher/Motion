@@ -32,7 +32,7 @@
 | Field | Decision |
 |---|---|
 | Shape | UI documentary of one task (held take inside the page for acts 2-4). Rejected: montage (no differentiator), typographic essay (his value is a result, not a sentence). |
-| Length | 584 f / 19.5 s, 30 fps, 1920x1080 |
+| Length | 578 f / 19.3 s, 30 fps, 1920x1080 |
 | Clock / grammar | smooth; per-element **smear** (blur only on fast moves); no shutter |
 | Type | Space Grotesk 500 (headings, name), Switzer 500/600 (UI), IBM Plex Sans Arabic 500/600 (Arabic). Sentence case. |
 | Accent | `#1ede55` = **"live / reachable"**. At most one element per scene: s1 the availability square; s2 the LIVE chip (B4 only); s5 none; s6 the availability square. His sample's own green details are set neutral. |
@@ -61,10 +61,10 @@ B1 2 · B2 2 · **B3 3** · B4 2 · B5 1 · B6 2. One of six beats is at importa
 | 3 | turn/proof | **3** | …sees the site *become* Arabic, mirrored right-to-left, not translated in place | the same page with every block sliding across its centre line | `العربية` → `English`; Arabic nav, headline, buttons, panel, cards (all real, from /ar) | cursor enters at 2.6x and parks; press; mirror cascade 2 f apart; macro on the Arabic headline | same take; pull back | 225-360 |
 | 4 | proof | 2 | …sees it go live and receive its first customer message | the page goes live: green chip, toast; cursor presses the Message button; the counter steps from 0 to 1 | "LIVE ✦", "yourwebsite.com", "الموقع منشور / على نطاقك الخاص", "راسلنا", "رسائل هذا الشهر" (real); count 0→1 (illustrative, his site labels it "example figures") | press, then a whip to the counter | the camera whips left off the page | 360-446 |
 | 5 | proof | 1 | …sees this is not a mock-up: four real client builds | a strip of four real project covers racing past, decelerating | "Bareeq Almas", "Eishan", "Computer Center", "Al-Jawhara Archive" + categories (real) | already moving at the cut, lands on Al-Jawhara | the last cover contracts to a square at frame centre | 446-520 |
-| 6 | cta | 2 | …knows who to message, in his words | his square headshot, the name beside it, one line under it, in the lit dot field | "Jafer Nouri"; "Tell me about your business." (his line; echoes the opening placeholder) | the headshot replaces the contracted cover at the same centre, then slides left as the name rises; slow contraction to the last frame | (end) resolved hold ≈ 1.1 s | 524-584 (10 %) |
+| 6 | cta | 2 | …knows who to message, in his words | his square headshot, the name beside it, one line under it, in the lit dot field | "Jafer Nouri"; "Tell me about your business." (his line; echoes the opening placeholder) | the headshot replaces the contracted cover at the same centre, then slides left as the name rises; slow contraction to the last frame | (end) resolved hold ≈ 1.2 s | 524-578 (9 %) |
 
 ## Checks before building
-- Lengths: 105/120/135/86/78/60 f = 584 f (19.5 s). The CTA is 60 f = 10 % (≤ 25 %), and the planned end hold is ~1.1 s (everything in the lockup lands by f550).
+- Lengths: 105/120/135/86/78/54 f = 578 f (19.3 s). The CTA is 54 f = 9 % (≤ 25 %), and the planned end hold is ~1.1 s (everything in the lockup lands by f550).
 - G1: page text is magnified by the camera (macro on the input, toggle, Arabic headline and counter), and the page is ≥ 0.75 W at its widest.
 - G4: one hero per frame. The chat panel, then the page, then one cover at a time, then the lockup.
 - Chrome audit: no corner labels, counters, timecodes or progress bars. The URL bar, chips and annotation labels are inside the rebuilt page (`data-ui="captured"`).

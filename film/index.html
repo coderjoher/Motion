@@ -146,9 +146,9 @@ html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; backgro
       <div class="status"><i></i>Available for new projects</div>
       <div class="rule"></div>
       <div id="dots"><i style="left:22px"></i><i style="left:47px"></i><i style="left:72px"></i></div>
-      <div id="bubble">Hi Jafer, we need a website in Arabic and English.</div>
       <div id="field1"><div id="ph">Tell me about your business</div><div id="typed">Hi Jafer, we need a website in Arabic and English.</div><i id="caret"></i></div>
       <div id="send"><svg viewBox="0 0 76 76"><path d="M24 38 H52 M40 26 L52 38 L40 50" fill="none" stroke="#0e0e0e" stroke-width="4" stroke-linecap="square"/></svg></div>
+      <div id="bubble">Hi Jafer, we need a website in Arabic and English.</div>
     </div>
   </div></section>
 
@@ -271,7 +271,7 @@ your shop or team</div>
 <script src="./runtime/motion.js"></script>
 <script>
 /* SEEK CONTRACT: every frame is a pure function of t. Authored only through Motion calls (or M.tl.fromTo with immediateRender:false). */
-const M = window.__M = Motion.film({ fps: 30, duration: 584 / 30, width: 1920, height: 1080, clock: 'smooth' });
+const M = window.__M = Motion.film({ fps: 30, duration: 578 / 30, width: 1920, height: 1080, clock: 'smooth' });
 
 /* camera helper: origin 0 0, centre scene point (px, py) at scale s */
 const C = (s, px, py) => ({ scale: s, x: 960 - s * px, y: 540 - s * py });
@@ -389,7 +389,7 @@ M.kf('#cv4img', 'clipPath', [[512, 0], [524, 95, 'gentleIn']], { fmt: v => 'inse
 M.kf('#cv4img', 'scale', [[512, 1], [524, .3, 'gentleIn']]);
 M.exit('#cv4cap', { at: 510, frames: 10, ease: 'accelExit', to: { y: 60 }, hide: true });
 
-/* ================= 6  NAME  524-584 ================= */
+/* ================= 6  NAME  524-578 ================= */
 M.cut(524, { hide: ['#s5'], show: ['#s6'], label: 'cover becomes the headshot' });
 // cover4 centre on screen at f524: strip x -2000 + 2550 + 380 = 930, y = 160 + 285 = 445
 M.kf('#hs', 'x', [[524, 0], [540, 518 - 850, 'softLand']]);
@@ -398,7 +398,7 @@ M.kf('#hs', 'scale', [[524, 1.06], [540, 1, 'softLand']]);
 M.words('#name', { at: 526, mech: 'rise', dist: 70, gaps: 4, frames: 12 });
 M.words('#line', { at: 532, mech: 'rise', dist: 50, gaps: 2, frames: 10 });
 M.show('#avail', 540);
-M.drift('#lockup', { prop: 'scale', from: 1, to: .955, start: 540, end: 584 });
+M.drift('#lockup', { prop: 'scale', from: 1, to: .955, start: 540, end: 578 });
 
 window.__ready = Motion.loaded().then(() => { if (/selftest/.test(location.search)) Motion.selfTest(M, { samples: 24 }); });
 </script>
