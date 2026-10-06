@@ -95,7 +95,7 @@ import { Audio, staticFile } from "remotion";
 
 ## First Message (motionmaxxing)
 
-A 19.7 s UI documentary of one task, built on the site's own line "From first message to live site":
+A 19.5 s UI documentary of one task, built on the site's own line "From first message to live site":
 
 1. A client's first message is typed into a chat panel.
 2. The camera dives into the sent message, and it becomes the first wireframe block of Jafer's sample site.
@@ -116,7 +116,7 @@ Re-render it with a local clone of the skill (Chrome + ffmpeg required):
 ```bash
 git clone https://github.com/Tejashmakwana/motionmaxxing ../motionmaxxing
 node ../motionmaxxing/scripts/render.mjs film/index.html film/final.mp4 --grain 0.03
-python3 ../motionmaxxing/scripts/look.py film/final.mp4 --out film/look-final --expect 19.67
+python3 ../motionmaxxing/scripts/look.py film/final.mp4 --out film/look-final --expect 19.47
 node ../motionmaxxing/scripts/lint.mjs film/index.html
 ```
 
